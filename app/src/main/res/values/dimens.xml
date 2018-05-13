@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="search_padding">10dp</dimen>
+    <dimen name="card_margin_left">30dp</dimen>
+    <dimen name="card_margin_right">30dp</dimen>
+    <dimen name="card_margin_top">40dp</dimen>
+    <dimen name="text_padding">25dp</dimen>
+    <dimen name="fad_right_margin">25dp</dimen>
+</resources>
