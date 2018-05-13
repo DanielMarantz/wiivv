@@ -1,0 +1,7 @@
+query SearchJoke($query: String!) {
+    joke(query: $query) {
+        id
+        joke
+        permalink
+    }
+}
