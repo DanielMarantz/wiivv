@@ -1,6 +1,6 @@
 package com.wiivv.assessment.di.component;
 
-import com.test.realtor.assessment.MainApplication;
+import com.wiivv.assessment.MainApplication;
 import com.wiivv.assessment.di.module.BaseWiivvModule;
 import com.wiivv.assessment.di.module.MainApplicationModule;
 

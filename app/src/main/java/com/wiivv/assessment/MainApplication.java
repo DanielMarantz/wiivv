@@ -1,8 +1,9 @@
-package com.test.realtor.assessment;
+package com.wiivv.assessment;
 
 import android.app.Application;
 
 import com.wiivv.assessment.di.component.BaseWiivvComponent;
+import com.wiivv.assessment.di.component.DaggerBaseWiivvComponent;
 import com.wiivv.assessment.di.module.BaseWiivvModule;
 import com.wiivv.assessment.di.module.MainApplicationModule;
 
