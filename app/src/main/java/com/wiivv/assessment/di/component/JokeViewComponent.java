@@ -2,6 +2,8 @@ package com.wiivv.assessment.di.component;
 
 import com.wiivv.assessment.di.module.ApiModule;
 import com.wiivv.assessment.di.scope.PerSection;
+import com.wiivv.assessment.view.activity.main.MainActivity;
+import com.wiivv.assessment.view.fragment.main.JokeFragment;
 
 import dagger.Component;
 
@@ -18,5 +20,6 @@ import dagger.Component;
 })
 
 public interface JokeViewComponent {
-
+    void inject(MainActivity mainActivity);
+    void inject(JokeFragment jokeFragment);
 }
