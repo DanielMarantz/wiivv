@@ -20,6 +20,8 @@ import dagger.Component;
 })
 
 public interface JokeViewComponent {
+
     void inject(MainActivity mainActivity);
+
     void inject(JokeFragment jokeFragment);
 }

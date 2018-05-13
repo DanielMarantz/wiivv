@@ -12,6 +12,7 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import com.test.realtor.assessment.R;
 import com.wiivv.assessment.presenter.main.JokePresenter;
 import com.wiivv.assessment.view.activity.main.MainActivity;
 import com.wiivv.assessment.view.fragment.base.BaseFragmentWithButterKnife;

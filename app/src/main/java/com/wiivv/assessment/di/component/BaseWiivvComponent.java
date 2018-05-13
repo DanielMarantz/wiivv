@@ -15,7 +15,6 @@ import dagger.Component;
  * put both together. They just give you instances of all the types you defined, for example, we must annotate an interface with @Component
  * and list all the @Modules that will compose that component, and if any of them is missing, we get errors at compile time.
  * All the components are aware of the scope of dependencies it provides through its modules.
- *
  * @Singleton is annotation for scope control. The scope defines the alive range for the dependency. In here is Application scope.
  */
 @Singleton

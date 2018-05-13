@@ -44,30 +44,5 @@ public class JokePresenter extends BasePresenter<JokePanel> {
 
     public void searchJoke(final String keyword) {
 
-        mDisposables.add(Rx2Apollo.from(mApiHelper.searchJoke(keyword))
-                .subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribeWith(new DisposableSingleObserver<Response<SearchJoke.Data>>() {
-
-                    @Override
-                    public void onSuccess(Response<SearchJoke.Data> dataResponse) {
-                        SearchJoke.Data data = dataResponse.data();
-                        SearchJoke.Joke jokeData = data.joke();
-
-                        if(jokeData != null) {
-                            Log.d(TAG, "searchJoke onSuccess");
-                            mPanel.renderJoke(jokeData.joke());
-                        } else {
-                            Log.e(TAG, "searchJoke No Result");
-                            mPanel.renderError();
-                        }
-                    }
-
-                    @Override
-                    public void onError(Throwable e) {
-                        Log.e(TAG, e.getMessage(), e);
-                        mPanel.renderError();
-                    }
-                }));
     }
 }

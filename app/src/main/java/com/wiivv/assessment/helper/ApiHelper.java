@@ -29,8 +29,5 @@ public class ApiHelper {
         return mApiClient.getApolloClient();
     }
 
-    public ApolloCall<SearchJoke.Data> searchJoke(String keyword) {
-        return getApolloClient().query(new SearchJoke(keyword))
-                .cacheControl(CacheControl.CACHE_FIRST);
-    }
+
 }

@@ -1,6 +1,6 @@
 package com.wiivv.assessment.di.module;
 
-import com.test.realtor.assessment.MainApplication;
+import com.wiivv.assessment.MainApplication;
 
 import javax.inject.Singleton;
 

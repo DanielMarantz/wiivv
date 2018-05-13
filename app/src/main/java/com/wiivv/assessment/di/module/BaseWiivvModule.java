@@ -1,13 +1,13 @@
 package com.wiivv.assessment.di.module;
 
-import com.test.realtor.assessment.MainApplication;
+import com.wiivv.assessment.MainApplication;
 
 import dagger.Module;
 
 /**
  * BaseWiivvModule will be providing application level (singleton) dependencies which can be
  * instanced when MainApplication get started.
- *
+ * <p>
  * Dagger will use BaseWiivvModule to implement BaseWiivvComponent which actually takes charge of performing injection
  *
  * @Module: Modules are classes whose methods provide dependencies, so we define a class and annotate it with @Module,
@@ -20,7 +20,7 @@ public class BaseWiivvModule {
 
     MainApplication application;
 
-    public BaseWiivvModule(MainApplication application){
+    public BaseWiivvModule(MainApplication application) {
         this.application = application;
     }
 }

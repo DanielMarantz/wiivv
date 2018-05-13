@@ -1,6 +1,12 @@
 package com.wiivv.assessment.di.module;
 
+import android.content.Context;
+
+import com.wiivv.assessment.di.scope.PerSection;
+import com.wiivv.assessment.helper.ApiHelper;
+
 import dagger.Module;
+import dagger.Provides;
 
 /**
  * ApiModule will be used by Dagger to implement JokeViewComponent.
@@ -13,4 +19,15 @@ import dagger.Module;
 @Module
 public class ApiModule {
 
+    private ApiHelper apiHelper;
+
+    public ApiModule(Context context) {
+        this.apiHelper = new ApiHelper(context);
+    }
+
+    @Provides
+    @PerSection
+    public ApiHelper providesApiHelper() {
+        return apiHelper;
+    }
 }

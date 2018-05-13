@@ -8,7 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Toast;
 
-import com.test.realtor.assessment.MainApplication;
+import com.wiivv.assessment.MainApplication;
 
 /**
  * All Activities will be extended from this class.
