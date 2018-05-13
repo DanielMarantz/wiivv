@@ -1,6 +1,9 @@
 package com.wiivv.assessment.view.activity.main;
 
 import android.os.Bundle;
+import android.support.v4.app.FragmentTransaction;
+import android.view.View;
+
 import com.test.realtor.assessment.R;
 import com.wiivv.assessment.di.component.DaggerJokeViewComponent;
 import com.wiivv.assessment.di.component.JokeViewComponent;
@@ -19,6 +22,7 @@ public class MainActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         initialInjector();
+        initialView();
     }
 
     public void initialInjector() {
@@ -33,4 +37,13 @@ public class MainActivity extends BaseActivity {
         return mJokeViewComponent;
     }
 
+    private void initialView() {
+        showJokeFragment(null);
+    }
+
+    public void showJokeFragment(View sharedElement) {
+        FragmentTransaction transaction = buildFragmentTransaction(sharedElement);
+        mJokeFragment = new JokeFragment();
+        transaction.replace(R.id.fragment_container, mJokeFragment).commit();
+    }
 }
