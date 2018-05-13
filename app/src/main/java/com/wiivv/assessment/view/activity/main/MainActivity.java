@@ -4,7 +4,7 @@ import android.os.Bundle;
 import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 
-import com.test.realtor.assessment.R;
+import com.wiivv.assessment.R;
 import com.wiivv.assessment.di.component.DaggerJokeViewComponent;
 import com.wiivv.assessment.di.component.JokeViewComponent;
 import com.wiivv.assessment.di.module.ApiModule;

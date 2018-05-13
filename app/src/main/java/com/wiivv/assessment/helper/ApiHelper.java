@@ -2,8 +2,10 @@ package com.wiivv.assessment.helper;
 
 import android.content.Context;
 
+import com.apollographql.apollo.ApolloCall;
 import com.apollographql.apollo.ApolloClient;
 import com.apollographql.apollo.cache.normalized.CacheControl;
+import com.apollographql.apollo.sample.SearchJoke;
 import com.wiivv.assessment.api.ApiClient;
 
 import javax.inject.Inject;
@@ -29,5 +31,8 @@ public class ApiHelper {
         return mApiClient.getApolloClient();
     }
 
-
+    public ApolloCall<SearchJoke.Data> searchJoke(String keyword) {
+        return getApolloClient().query(new SearchJoke(keyword))
+                .cacheControl(CacheControl.CACHE_FIRST);
+    }
 }
